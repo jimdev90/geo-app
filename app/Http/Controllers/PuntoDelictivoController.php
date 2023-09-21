@@ -15,12 +15,12 @@ class PuntoDelictivoController extends Controller
 {
     public function index()
     {
-        $puntos = PuntoDelictivo::get();
+        $puntos = PuntoDelictivo::where('user_create', auth()->user()->cip)->get();
         return view('punto-delictivo.index', compact('puntos'));
     }
     public function create()
     {
-        $tipos = TipoPuntoIncidencia::get();
+        $tipos = TipoPuntoIncidencia::orderBy('nombre', 'asc')->get();
         return view('punto-delictivo.create', compact('tipos'));
     }
 
@@ -66,7 +66,7 @@ class PuntoDelictivoController extends Controller
 
     public function edit(PuntoDelictivo $punto)
     {
-        $tipos = TipoPuntoIncidencia::get();
+        $tipos = TipoPuntoIncidencia::orderBy('nombre', 'asc')->get();
         return view('punto-delictivo.edit', compact('punto', 'tipos'));
     }
 

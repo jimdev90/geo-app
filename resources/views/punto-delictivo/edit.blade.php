@@ -2,6 +2,7 @@
 @push('css_custom')
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <style>
         #map {
             height: 50vh;
@@ -120,11 +121,14 @@
 @push("scripts_custom")
     <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <script>
         const RegistrarPuntoDelictivo = function () {
 
             const _btnGeoRefLugar = $('#georef-lugar');
+            const _selecttipos = $('#id_tipo_punto');
+            _selecttipos.select2()
 
             const _mostrarImagenCargada = function () {
                 $('#imagen').change(function (e) {
