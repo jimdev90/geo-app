@@ -5,7 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Iniciar Sesión') }}</div>
+                <div class="card-header text-center">
+                    <img width="300" src="{{ asset('images/owl_logo.svg') }}" alt="">
+                    <h3 class="mt-3">{{ __('Iniciar Sesión') }}</h3>
+                </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">

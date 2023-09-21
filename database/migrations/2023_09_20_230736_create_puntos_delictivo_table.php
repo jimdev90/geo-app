@@ -21,9 +21,9 @@ class CreatePuntosDelictivoTable extends Migration
             $table->string('lat');
             $table->string('lng');
             $table->text('observaciones');
-            $table->string('imagen', 255);
-            $table->enum('estado', [\App\Models\PuntoDelictivo::ACTIVO, \App\Models\PuntoDelictivo::INACTIVO])->default(\App\Models\PuntoDelictivo::ACTIVO);
+            $table->string('user_create');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

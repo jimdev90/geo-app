@@ -15,6 +15,7 @@
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^3.4",
+        "laraveles/spanish": "^1.5",
         "yoeunes/toastr": "^2.3"
     },
     "require-dev": {

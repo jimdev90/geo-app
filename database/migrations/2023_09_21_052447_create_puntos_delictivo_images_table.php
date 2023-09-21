@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTiposPuntosIncidenciaTable extends Migration
+class CreatePuntosDelictivoImagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateTiposPuntosIncidenciaTable extends Migration
      */
     public function up()
     {
-        Schema::create('tipos_puntos_incidencia', function (Blueprint $table) {
+        Schema::create('puntos_delictivo_images', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
+            $table->unsignedBigInteger('id_punto_delictivo');
+            $table->string('url');
+            $table->string('user_create');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -28,6 +30,6 @@ class CreateTiposPuntosIncidenciaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tipos_puntos_incidencia');
+        Schema::dropIfExists('puntos_delictivo_images');
     }
 }

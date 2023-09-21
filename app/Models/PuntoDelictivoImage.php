@@ -6,16 +6,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class TipoPuntoIncidencia extends Model
+class PuntoDelictivoImage extends Model
 {
     use HasFactory, SoftDeletes;
-
     const ACTIVO = 1;
     const INACTIVO = 0;
 
-    protected $table = "tipos_puntos_incidencia";
+    protected $table = "puntos_delictivo_images";
     protected $fillable = [
-        "nombre",
-        "estado"
+        "id_punto_delictivo",
+        "url",
+        "user_create",
     ];
 }

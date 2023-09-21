@@ -20,8 +20,10 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique()->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('rol')->default(\App\Models\User::AGENTE);
             $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
