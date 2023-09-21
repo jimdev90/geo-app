@@ -84,7 +84,7 @@
                             </div>
                             <div class="form-group mt-2">
                                 <label for="lat">Latitud</label>
-                                <input type="text" id="lat" name="lat" class="form-control" value="{{ old('lat') }}">
+                                <input type="text" id="lat" name="lat" class="form-control" value="{{ old('lat') }}" readonly>
                                 @error('lat')
                                 <div class="fv-plugins-message-container">
                                     <div class="fv-help-block text-danger">{{ $message }}</div>
@@ -93,7 +93,7 @@
                             </div>
                             <div class="form-group mt-2">
                                 <label for="lng">Longitud</label>
-                                <input type="text" id="lng" name="lng" class="form-control" value="{{ old('lng') }}">
+                                <input type="text" id="lng" name="lng" class="form-control" value="{{ old('lng') }}" readonly>
                                 @error('lng')
                                 <div class="fv-plugins-message-container">
                                     <div class="fv-help-block text-danger">{{ $message }}</div>
@@ -201,6 +201,7 @@
                 }
             }
         }()
+
         $(document).ready(function () {
             RegistrarPuntoDelictivo.init();
 
@@ -243,7 +244,7 @@
                 latInput.value = latlng.lat;
                 lngInput.value = latlng.lng;
             }
-            
+
             // document.getElementById('select-location').addEventListener('change', function(e){
             //     let coords = e.target.value.split(",");
             //     L.marker(coords).addTo(map)
