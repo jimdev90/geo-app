@@ -7,7 +7,10 @@
             <div class="card">
                 <div class="card-header text-center">
                     <div class="alert alert-success mt-3">
-                        <h2>Hola {{ auth()->user()->nombre }}</h2>
+                        <h1>Bienvenido</h1>
+                        <h2><strong>{{ auth()->user()->nombre }}</strong></h2>
+                        <h4>{{ auth()->user()->idusuarios }}</h4>
+                        <h5>{{ auth()->user()->unidad }}</h5>
                     </div>
                 </div>
 
