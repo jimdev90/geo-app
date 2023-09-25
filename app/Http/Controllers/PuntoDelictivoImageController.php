@@ -17,7 +17,7 @@ class PuntoDelictivoImageController extends Controller
         PuntoDelictivoImage::create([
             "id_punto_delictivo" => $request->id_punto_delictivo,
             "url" => $url,
-            "user_create" => auth()->user()->cip
+            "user_create" => auth()->user()->idusuarios
         ]);
 
         toastr('Imagen registrada correctamente!!');

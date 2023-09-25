@@ -15,12 +15,12 @@
                         @csrf
 
                         <div class="row mb-3">
-                            <label for="cip" class="col-md-4 col-form-label text-md-end">{{ __('Usuario') }}</label>
+                            <label for="login" class="col-md-4 col-form-label text-md-end">{{ __('Usuario') }}</label>
 
                             <div class="col-md-6">
-                                <input id="cip" type="text" class="form-control @error('cip') is-invalid @enderror" name="cip" value="{{ old('cip') }}" required autocomplete="cip" autofocus>
+                                <input id="login" type="text" class="form-control @error('login') is-invalid @enderror" name="login" value="{{ old('login') }}" required autocomplete="cip" autofocus>
 
-                                @error('cip')
+                                @error('login')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

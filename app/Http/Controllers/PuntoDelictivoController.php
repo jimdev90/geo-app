@@ -15,7 +15,9 @@ class PuntoDelictivoController extends Controller
 {
     public function index()
     {
-        $puntos = PuntoDelictivo::where('user_create', auth()->user()->cip)->get();
+
+        $puntos = PuntoDelictivo::where('user_create', auth()->user()->idusuarios)->get();
+
         return view('punto-delictivo.index', compact('puntos'));
     }
     public function create()
@@ -36,7 +38,7 @@ class PuntoDelictivoController extends Controller
                 "lat" => $request->lat,
                 "lng" => $request->lng,
                 "observaciones" => $request->observaciones,
-                "user_create" => auth()->user()->cip
+                "user_create" => auth()->user()->idusuarios
             ]);
 
             $file =  $request->file('imagen')->store('public/puntos-delictivos');
@@ -45,7 +47,7 @@ class PuntoDelictivoController extends Controller
             PuntoDelictivoImage::create([
                 "id_punto_delictivo" => $punto->id,
                 "url" => $url,
-                "user_create" => auth()->user()->cip
+                "user_create" => auth()->user()->idusuarios
             ]);
 
             DB::commit();
