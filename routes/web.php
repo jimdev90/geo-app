@@ -20,7 +20,6 @@ Route::get('/', function () {
 });
 
 Auth::routes([
-    "register" => false,
     "reset" => false,
     "confirm" => false,
     "verify" => false
