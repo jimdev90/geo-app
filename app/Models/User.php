@@ -10,7 +10,7 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable, SoftDeletes;
+    use HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -21,12 +21,19 @@ class User extends Authenticatable
     const ADMIN = '1';
     const AGENTE = '2';
 
+    protected $connection = 'mysql_dirin';
+    protected $table = 'usuarios';
+    protected $primaryKey = 'idusuarios';
+
     protected $fillable = [
-        'name',
-        'cip',
-        'email',
-        'password',
+        'idusuarios',
+        'usuario_nombre',
+        'usuario_clave',
+        'cod_uni1',
+        'estado',
     ];
+
+    public $timestamps = false;
 
     /**
      * The attributes that should be hidden for arrays.
