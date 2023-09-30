@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header text-center">
-                    <img width="300" src="{{ asset('images/owl_logo.svg') }}" alt="">
+                    <img width="200" src="{{ asset('images/ic_icono.png') }}" alt="">
                     <h3 class="mt-3">{{ __('Iniciar Sesión') }}</h3>
                 </div>
 
