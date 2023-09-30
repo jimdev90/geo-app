@@ -37,7 +37,7 @@
                 @else
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('punto-delictivo.index') }}">Puntos Delictivos <i
+                            <a class="nav-link" href="{{ route('punto-delictivo.index') }}">Puntos Críticos <i
                                     class="fa fa-location"></i></a>
                         </li>
                     </ul>
