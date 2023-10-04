@@ -138,6 +138,7 @@
             </div>
         </div>
     </div>
+
 @endsection
 @push("scripts_custom")
     <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>

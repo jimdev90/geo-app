@@ -85,6 +85,10 @@
     <main class="py-4">
         @yield('content')
     </main>
+
+    <div class="alert alert-warning text-center">
+        <p>Atención al usuario: 904362454 | 904444456</p>
+    </div>
 </div>
 
 <script src="{{ asset('js/code.jquery.com_jquery-2.2.4.js') }}"></script>
