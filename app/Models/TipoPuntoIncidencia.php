@@ -14,6 +14,7 @@ class TipoPuntoIncidencia extends Model
     const INACTIVO = 0;
 
     protected $table = "tipos_puntos_incidencia";
+    protected $primaryKey = "";
     protected $fillable = [
         "nombre",
         "estado"
